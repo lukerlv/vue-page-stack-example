@@ -9,6 +9,7 @@
           :item="item"
           :index="index"
           @click="onClick(item)"
+          ref="itemRef"
         ></main-item>
       </div>
     </div>
@@ -95,6 +96,8 @@ const list = ref([
 const wrapper = ref(null);
 
 const bs = ref(null);
+
+const itemRef = ref();
 
 const onClick = item => {
   router.push('/main-detail/' + item.id);
